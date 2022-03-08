@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+  
+{% block title %}Home{% endblock %}
+  
+{% block side %}
+
+<h1 class="m-0 p-4 border-bottom">Welcome, {{ account['username'] }}!</h1>
+<h3 class="m-3 p-2 profile">Profile</h3>
+<ul>
+    <li class="profile">
+        Username: {{ account['username'] }}
+    </li>
+    <li class="profile">
+        Country: {{ account['country'] }}
+    </li>
+    <li class="profile">
+        Email: {{ account['email'] }}
+    </li>
+    <li class="profile">
+        Birthdate: {{ account['gdata'] }}
+    </li>
+</ul>
+{% endblock %}

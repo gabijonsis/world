@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Little quiz</title>
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet"> 
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    </head>
+
+    <body class="loggedin">
+        <nav class="navbar navbar-light d-flex justify-content-center align-items-center p-3">
+          <div>
+            <a class="text-decoration-none sitename-loggedin text-light" href="{{ url_for('home') }}">WORLD</a>
+          </div>
+        </nav>
+        
+        <div class="row g-0">
+          <div class="col-3 text-light d-flex justify-content-between flex-wrap flex-column side">
+            <div class="p-2">
+                <h1 class="m-0 p-4 border-bottom">Welcome, {{ account['username'] }}!</h1>
+                <h3 class="m-3 p-2 profile">Profile</h3>
+                <ul>
+                    <li class="profile">
+                        Username: {{ account['username'] }}
+                    </li>
+                    <li class="profile">
+                        Country: {{ account['country'] }}
+                    </li>
+                    <li class="profile">
+                        Email: {{ account['email'] }}
+                    </li>
+                    <li class="profile">
+                        Birthdate: {{ account['gdata'] }}
+                    </li>
+                </ul>
+            <div class="p-2">
+              <a class="home d-block mx-2" href="{{ url_for('home') }}">Home / Country info</a>
+              <a class="timezones d-block mx-2" href="{{ url_for('timezones') }}">Time anywhere in the world</a>
+              <a class="timezones d-block mx-2" href="{{ url_for('table') }}">Population table</a>
+              <a class="quiz d-block mx-2" href="{{ url_for('quiz') }}">Little quiz</a>
+            </div>
+            </div>
+            <a class="logout" href="{{ url_for('logout') }}">Logout</a>
+          </div>
+          <div class="col-9 d-flex justify-content-center align-items-center flex-column country-container gx-0">
+            <form action="{{ url_for('result') }}" class="quiz-background p-4" method="post">
+                <p>How many countries are in Europe?</p>
+                <input  type="radio" name="q1" value="52" required>
+                <label for="52">52</label><br>
+                <input  type="radio" name="q1" value="44">
+                <label for="44">44</label><br>
+                <input  type="radio" name="q1" value="41">
+                <label for="41">41</label>
+
+                <p>How many square kilometres is Andorra?</p>
+                <input type="radio" name="q2" value="468" required>
+                <label for="m1">468</label><br>
+                <input type="radio" name="q2" value="504">
+                <label for="m2">504</label><br>  
+                <input type="radio" name="q2" value="624">
+                <label for="m3">624</label><br><br>
+
+                <p>In which continent is Lima city?</p>
+                <input type="radio" name="q3" value="North America" required>
+                <label for="c1">North America</label><br>
+                <input type="radio" name="q3" value="South America">
+                <label for="c2">South America</label><br>  
+                <input type="radio" name="q3" value="Africa">
+                <label for="c3">Africa</label><br><br>
+
+                <p>When did the king of Spain Philip come to Philippines?</p>
+                <input type="radio" name="q4" value="1425" required>
+                <label for="k1">1425</label><br>
+                <input type="radio" name="q4" value="1642">
+                <label for="k2">1642</label><br>  
+                <input type="radio" name="q4" value="1521">
+                <label for="k3">1521</label><br><br>
+
+                <p>How many countries are in the world?</p>
+                <input type="radio" name="q5" value="221" required>
+                <label for="hc1">221</label><br>
+                <input type="radio" name="q5" value="196">
+                <label for="hc2">196</label><br>  
+                <input type="radio" name="q5" value="199">
+                <label for="hc3">199</label><br><br>
+
+                <input type="submit" value="Submit answer!"class="submit-btn"/>
+              </form>
+    
+          </div>
+        </div>
+   
+ </body>
+</html>
