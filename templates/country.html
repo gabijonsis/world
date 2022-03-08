@@ -41,6 +41,9 @@
                     <li class="profile">
                         Birthdate: {{ account['gdata'] }}
                     </li>
+                    <li class="profile">
+                      You are {{session ['days']}} days old
+                  </li>
                 </ul>
                 <div class="p-2">
                   <a class="home d-block mx-2" href="{{ url_for('home') }}">Home / Country info</a>
