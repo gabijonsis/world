@@ -219,7 +219,7 @@ def table():
     text_file = open("table.html", "w", encoding="utf-8")
     text_file.write(html)
     text_file.close()
-    os.replace(r"C:\Users\Zaltys\Desktop\kursai\final\table.html", r"C:\Users\Zaltys\Desktop\kursai\final\templates\table.html")
+    os.replace(r"C:\Users\Zaltys\Desktop\python-world-project\world\table.html", r"C:\Users\Zaltys\Desktop\python-world-project\world\templates\table.html")
     return render_template('table.html')
 
 

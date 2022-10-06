@@ -88,6 +88,11 @@ body.loggedin {
 	perspective: 1000px;
 }
 
+@-moz-document url-prefix() {
+	.card1 {
+		background-color: rgb(51 52 74 / 100%);
+	}
+}
 .inner-box {
 	position: relative;
 	width: 100%;

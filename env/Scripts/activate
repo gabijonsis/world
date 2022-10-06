@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Zaltys\Desktop\kursai\final\env"
+VIRTUAL_ENV="C:\Users\Zaltys\Desktop\python-world-project\world\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
