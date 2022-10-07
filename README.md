@@ -1,3 +1,3 @@
 # world
 Project "World"
-First Flask app
+Flask app with Phyton + PostgreSQL
