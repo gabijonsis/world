@@ -31,7 +31,6 @@
 </p>
 
 ### Summing up
-
 * Sign up data sent to PostgreSQL database
 <br>
 * Password encrypted
