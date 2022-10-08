@@ -31,10 +31,9 @@
 </p>
 <br>
 * Sign up data sent to PostgreSQL database
+<br>
 * Password encrypted
 * Displayed data in homepage + counted how old person is in days
 * Scrapped data (BeautifulSoup, Pandas)
 * Time calculation anywhere in the world
 * Little simple quiz (simple for the smart ones!)
-- 👋 Hi, I’m @gabijonsis
-- 🌱 I’m currently learning both front-end and back-end
