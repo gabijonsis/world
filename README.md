@@ -15,7 +15,17 @@
   You can check the current time in any country in the world
   <img src="static/pics/world-time.jpg" />
 </p>
+<br>
 <p>
   This is again a scrapped informtion from Wikipedia - this time a table that is displaying population in all countries of the world
   <img src="static/pics/world-table.jpg" />
+</p>
+<br>
+<p>
+  Little quiz for fun
+  <img src="static/pics/world-quiz.jpg" />
+</p>
+<br>
+<p>
+   You can log out as well
 </p>
