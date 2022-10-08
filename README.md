@@ -29,3 +29,10 @@
 <p>
    You can log out as well
 </p>
+<br>
+- Sign up data sent to PostgreSQL database
+- Password encrypted
+- Displayed data in homepage + counted how old person is in days
+- Scrapped data (BeautifulSoup, Pandas)
+- Time calculation anywhere in the world
+- Little simple quiz (simple for the smart ones!)
