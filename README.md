@@ -30,9 +30,9 @@
    You can log out as well
 </p>
 <br>
-[x]Sign up data sent to PostgreSQL database
-[x]Password encrypted
-[x]Displayed data in homepage + counted how old person is in days
-[x]Scrapped data (BeautifulSoup, Pandas)
-[x]Time calculation anywhere in the world
-[x]Little simple quiz (simple for the smart ones!)
+- [x]Sign up data sent to PostgreSQL database
+- [x]Password encrypted
+- [x]Displayed data in homepage + counted how old person is in days
+- [x]Scrapped data (BeautifulSoup, Pandas)
+- [x]Time calculation anywhere in the world
+- [x]Little simple quiz (simple for the smart ones!)
