@@ -32,14 +32,13 @@
 
 ### Summing up
 * Sign up data sent to PostgreSQL database
-<br>
+
 * Password encrypted
-<br>
+
 * Displayed data in homepage + counted how old person is in days
-<br>
+
 * Scrapped data (BeautifulSoup, Pandas)
-<br>
+
 * Time calculation anywhere in the world
-<br>
 
 * Little simple quiz (simple for the smart ones!)
