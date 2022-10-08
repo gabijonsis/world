@@ -29,6 +29,8 @@
 <p>
    You can log out as well
 </p>
+
+### Summing up
 <br>
 * Sign up data sent to PostgreSQL database
 <br>
