@@ -10,22 +10,29 @@
 <br>
 <p>
   This is the home page where you can search for information about countries. Data about countries is scrapped from Wikipedia
-  
+  <br />
+  <br />
   <img src="static/pics/world-home.jpg" />
 </p>
 <br>
 <p>
   You can check the current time in any country in the world
+  <br />
+  <br />
   <img src="static/pics/world-time.jpg" />
 </p>
 <br>
 <p>
   This is again a scrapped informtion from Wikipedia - this time a table that is displaying population in all countries of the world
+  <br />
+  <br />
   <img src="static/pics/world-table.jpg" />
 </p>
 <br>
 <p>
   Little quiz for fun
+  <br />
+  <br />
   <img src="static/pics/world-quiz.jpg" />
 </p>
 <br>
