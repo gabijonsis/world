@@ -4,6 +4,7 @@
 <p>
   This is the log in/sign up page
   <br />
+  <br />
   <img src="static/pics/world-login.jpg" />
 </p>
 <br>
