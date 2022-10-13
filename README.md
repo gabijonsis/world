@@ -41,6 +41,7 @@
 </p>
 <br />
 <br />
+
 ### Summing up
 * Sign up data sent to PostgreSQL database
 
