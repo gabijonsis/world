@@ -20,3 +20,17 @@ function openLogin() {
         }
     }
 }
+const menuBtn = document.querySelector(".hamburger");
+const side = document.querySelector(".side");
+let menuOpen = false;
+menuBtn.addEventListener("click",() => {
+    console.log("hh");
+    if(!menuOpen) {
+        side.setAttribute('style', 'display:inline !important');
+        menuOpen = true;
+    } 
+    else {
+        side.setAttribute('style', 'display:none !important');
+        menuOpen = false;
+    }
+});

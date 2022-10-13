@@ -22,13 +22,17 @@
           </div>
         </nav>
         
-        <div class="row g-0">
+        <div class="content row g-0">
+          <div class="hamburger menu-btn">
+            <div class="menu-btn__burger">
+            </div>
+          </div>
           <div class="col-3 text-light d-flex justify-content-between flex-wrap flex-column side">
-            <div class="p-2">
+            <div class="p-2 side-content">
             
                 <h1 class="m-0 p-4 border-bottom">Welcome, {{ account['username'] }}!</h1>
                 <h3 class="m-3 p-2 profile">Profile</h3>
-                <ul>
+                <ul class="profile-content">
                     <li class="profile">
                         Username: {{ account['username'] }}
                     </li>
@@ -58,23 +62,28 @@
               
               <h1 class="country-back">{{selected}}</h1> 
               <div class="d-flex flex-row justify-content-center">
-                <div class="col-4 m-1 p-2 country-back d-flex"> 
+                <div class="country-details col-4 m-1 p-2 country-back d-flex"> 
                   <ul>
                   {% for i in range (4, 28) %}
                     <li>{{infotr[i]}}</li>       
                   {% endfor %}
                   </ul>
                 </div> 
-                <div class="col-4 m-1 p-2 country-back d-flex"> 
+                <div class="country-details col-4 m-1 p-2 country-back d-flex"> 
                   <ul>
                   {% for i in range (29, leng) %}
                     <li>{{infotr[i]}}</li>
                   {% endfor %}
                   </ul>
                 </div>
+                <div class="country-details-resize p-3 country-back">
+                  {% for i in range (4, leng) %}
+                    <li>{{infotr[i]}}</li>
+                  {% endfor %}
+                </div> 
               </div>     
           </div>
         </div>
-        
+        <script src="{{url_for('static', filename='script.js')}}"></script>
     </body>
 </html>

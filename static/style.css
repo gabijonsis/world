@@ -24,10 +24,8 @@ body.loggedin {
 .sitename {
 	line-height: 80%;
     font-weight: 700;
-    font-size: 3rem;
     text-transform: uppercase;
 	padding: 37px 30px 0 30px;
-    -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0,0,0,0.2));
 }
 
 .sitename-loggedin {
@@ -35,33 +33,9 @@ body.loggedin {
     font-size: 4rem;
     text-transform: uppercase;
 	padding: 37px 30px 0 30px;
-	margin: 50px;
+	/* margin: 50px; */
 }
 
-@media (min-width: 544px) {
-    .sitename{
-        font-size: 3rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .sitename{
-        font-size: 4rem;
-    }
-}
-   
-@media (min-width: 1200px) {
-    .sitename{
-        font-size: 6rem;
-    }
-}
-
-@media (min-width: 1400px) {
-    .sitename{
-        font-size: 8rem;
-    }
-}
-    
 
 * {
 	margin: 0;
@@ -229,6 +203,9 @@ option {
 	;
 }
 
+.hamburger{
+	display: none;
+}
 .side {
 	background-color: #32344c;
 	height: 87vh;
@@ -277,11 +254,13 @@ ul > li {
 }
 
 .logout {
+	background-color: #32344c;
 	color: #cdc1b1;
 	position: fixed;
 	bottom: 23px;
 	left: 23px;
 	z-index: 10;
+	padding: 0.4rem;
 }
 	
 .logout:hover {
@@ -292,8 +271,10 @@ ul > li {
 	background-color: rgb(249 249 249 / 30%);
     backdrop-filter: blur(10px);
 	color:rgb(59, 61, 87);
-	overflow-wrap: break-word;
-  	word-wrap: break-word;
+	word-break: break-word;
+}
+.country-details-resize{
+	display: none;
 }
 
 .timezones, .home, .quiz {
@@ -331,3 +312,188 @@ ul > li {
 	color: #d1bb9e;
 }
 
+@media (min-width: 1201px) {
+	.sitename{
+		/* margin-top: 1.5rem; */
+		font-size: 6rem;
+		-webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0,0,0,0.2));
+	}
+	.container{
+		margin-top: 175px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.sitename{
+		font-size: 6rem;
+	}
+	.container{
+		margin-top: 175px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.sitename{
+		font-size: 4rem;
+	}
+	.container{
+		margin-top: 88px;
+	}
+	.content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.side{
+		height: 10rem;
+    	width: 100%;
+	}
+	.country-container{
+		width: 100%;
+		min-height: 70vh;
+	}
+	/* .profile{
+		display: none;
+	} */
+	.border-bottom {
+		order: 2;
+	}
+	.side-content{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.side-content > h3{
+		display: none;
+	}
+	.profile-content{
+		display: block;
+		order: 3;
+		padding-right: 1rem;
+		padding-top: 8px;
+	}
+	.country-details{
+		display: none!important;
+	}
+	.country-details-resize{
+		display: block;
+		margin-left: 7rem;
+    	margin-right: 7rem;
+		margin-bottom: 3rem;
+	}
+}
+
+@media (max-width: 900px) {
+	.sitename{
+		font-size: 4rem;
+	}
+	.container{
+		margin-top: 88px;
+	}
+}
+
+@media (max-width: 768px) {
+	.sitename{
+		font-size: 4rem;
+	}
+	.hamburger{
+		display: inline;
+	}
+	.container{
+		margin-top: 88px;
+	}
+	.menu-btn {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 80px;
+		height: 80px;
+		cursor: pointer;
+		transition: all .5s ease-in-out;
+		/* border: 3px solid #fff; */
+	}
+	.menu-btn__burger {
+		width: 50px;
+		height: 6px;
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(255,101,47,.2);
+		transition: all .5s ease-in-out;
+	}
+	.menu-btn__burger::before,
+	.menu-btn__burger::after {
+		content: '';
+		position: absolute;
+		width: 50px;
+		height: 6px;
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0 2px 5px rgba(255,101,47,.2);
+		transition: all .5s ease-in-out;
+	}
+	.menu-btn__burger::before {
+		transform: translateY(-16px);
+	}
+	.menu-btn__burger::after {
+		transform: translateY(16px);
+	}
+	
+	.menu-btn.open .menu-btn__burger {
+		transform: translateX(-50px);
+		background: transparent;
+		box-shadow: none;
+	}
+	.menu-btn.open .menu-btn__burger::before {
+		transform: rotate(45deg) translate(35px, -35px);
+	}
+	.menu-btn.open .menu-btn__burger::after {
+		transform: rotate(-45deg) translate(35px, 35px);
+	}
+	.side{
+		display: none !important;
+		font-size: medium;
+	}
+	.border-bottom{
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	.sitename{
+		font-size: 4rem;
+	}
+	.container{
+		margin-top: 88px;
+	}
+	.side{
+		font-size: small;
+	}
+	.display-time{
+		font-size: 50px;
+	}
+	.logout{
+		position: relative;
+		padding: 0;
+	}
+}
+@media (max-width: 480px) {
+	.sitename{
+		font-size: 3rem;
+	}
+	.container{
+		margin-top: 88px;
+	}
+	.country-loggedin{
+		width: 200px;
+	}
+	.country-details-resize{
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+	.display-time{
+		font-size: 32px;
+	}
+}
+	

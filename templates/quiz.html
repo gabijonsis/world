@@ -22,12 +22,16 @@
           </div>
         </nav>
         
-        <div class="row g-0">
+        <div class="content row g-0">
+          <div class="hamburger menu-btn">
+            <div class="menu-btn__burger">
+            </div>
+          </div>
           <div class="col-3 text-light d-flex justify-content-between flex-wrap flex-column side">
-            <div class="p-2">
+            <div class="p-2 side-content">
                 <h1 class="m-0 p-4 border-bottom">Welcome, {{ account['username'] }}!</h1>
                 <h3 class="m-3 p-2 profile">Profile</h3>
-                <ul>
+                <ul class="profile-content">
                     <li class="profile">
                         Username: {{ account['username'] }}
                     </li>
@@ -53,7 +57,7 @@
             </div>
             <a class="logout" href="{{ url_for('logout') }}">Logout</a>
           </div>
-          <div class="col-9 d-flex justify-content-center align-items-center flex-column country-container gx-0">
+          <div class="col-9 p-4 d-flex justify-content-center align-items-center flex-column country-container gx-0">
             <form action="{{ url_for('result') }}" class="quiz-background p-4" method="post">
                 <p>How many countries are in Europe?</p>
                 <input  type="radio" name="q1" value="52" required>
@@ -99,6 +103,6 @@
               </form>
           </div>
         </div>
-   
+        <script src="{{url_for('static', filename='script.js')}}"></script>
  </body>
 </html>

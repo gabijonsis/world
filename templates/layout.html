@@ -22,9 +22,13 @@
           </div>
         </nav>
         
-        <div class="row g-0">
+        <div class="content row g-0">
+          <div class="hamburger menu-btn">
+            <div class="menu-btn__burger">
+            </div>
+          </div>
           <div class="col-3 text-light d-flex justify-content-between flex-wrap flex-column side">
-            <div class="p-2">
+            <div class="p-2 side-content">
             {% block side %}{% endblock %}
             <div class="p-2">
               <a class="home d-block mx-2" href="{{ url_for('home') }}">Home / Country info</a>
@@ -37,7 +41,7 @@
           </div>
           <div class="col-9 d-flex justify-content-center align-items-center flex-column country-container gx-0">
               
-              <h2 class="d-block p-2 country-log">Which country do you want to get to know better?</h2>
+              <h2 class="d-block p-2 country-log">Explore countries</h2>
               <form action="{{ url_for('country') }}" class="d-flex align-items-center" method="post">
                 <select name="country-selection" class="form-control country-loggedin" required>
                   <option value="" class="countries" selected="selected required">Select a country</option>
@@ -308,6 +312,7 @@
               </form>
           </div>
         </div>
+        <script src="{{url_for('static', filename='script.js')}}"></script>
    
  </body>
 </html>
